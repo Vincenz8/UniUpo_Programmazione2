@@ -24,4 +24,13 @@ La complessità computazionale è la seguente:
 - spazio O(logn)
 
 ## QuickSort
+L'algoritmo si suddivide in tre step:
+
+1. viene scelto un elemento(in maniera casuale o l'ultimo) dagli elementi da ordinare.
+2. gli elementi < dell'elemento scelto verrano disposti alla sua sinistra, i > sulla destra.
+3. si applica ricorsivamente il meccanismo alle sottosequenze che si creano suddividendo gli elementi iniziali.
+
+La seguente figura raffigura l'albero dell'algoritmo:
+
+![quicksort](quick_sort_tree.png)
 
