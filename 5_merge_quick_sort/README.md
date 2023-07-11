@@ -16,7 +16,7 @@ L'algoritmo si suddivide in tre step:
 
 La seguente figura raffigura l'albero dell'algoritmo:
 
-![mergesort](merge_sort_tree_4.png)
+![mergesort](img_doc/merge_sort_tree_4.png)
 
 La complessità computazionale è la seguente:
 
@@ -32,5 +32,20 @@ L'algoritmo si suddivide in tre step:
 
 La seguente figura raffigura l'albero dell'algoritmo:
 
-![quicksort](quick_sort_tree.png)
+![quicksort](img_doc/quick_sort_tree.png)
 
+La complessità computazionale dipende da quale elemento cardine viene scelto, se l'elemento cardine divide sempre a metà gli elementi:
+
+- tempo O(nlogn)
+- spazio O(nlogn)
+
+Nel caso peggiore invece avremo:
+
+- tempo O(n^2)
+- spazio O(n)
+
+## Differenze principali
+
+L'algoritmo ***Quicksort*** non necessita di una struttura dati di supporto per l'ordinamento data la modifica dei dati *in place*, invece nel ***Mergesort*** è fondamentale per la realizzazione del suddetto.
+
+Ulteriori differenze risiedono nella complessità computazionale: il Mergesort ha una complessità fissa, il Quicksort dipende dalla scelta del cardine; nonostante ciò si è sperimentato che il Quicksort mediamente ha una performance migliore.
