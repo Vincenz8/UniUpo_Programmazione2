@@ -22,7 +22,7 @@ raggiunto la sua fine…*
 
 Sono previste 3 torri e un numero variabile di dischi disposti come da figura:
 
-![hanoi](hanoi.jpeg)
+![hanoi](img_doc/hanoi.jpeg)
 
 L'obiettivo è spostare tutti i dischi nell'ultima torre nello stesso ordine, muovendoli uno alla volta e senza disporre un disco più grande sopra un disco più piccolo.
 
