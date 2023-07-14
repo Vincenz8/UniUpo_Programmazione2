@@ -1,5 +1,1 @@
-# Pile e code
-
-## Pila (stack)
-
-## Coda (queue)
+# Esercizi da esame
