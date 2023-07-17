@@ -12,7 +12,7 @@ typedef struct Nodo* link;
 link new_node();
 link build_list(int n);
 void list_print(link head);
-int del_mul_k(link* head, int k);
+float media(link head, int* n, int len_list, int i);
 
 
 int main()
@@ -22,8 +22,8 @@ int main()
 
     head = build_list(10);
     list_print(head);
-    n = del_mul_k(&head, 2);
-    list_print(head);
+    printf("%.2f", media(head, &n, 10, 1));
+
 }
 
 link new_node()
@@ -72,50 +72,23 @@ void list_print(link head)
     printf("\n");
 }
 
-int del_mul_k(link* head, int k)
+float media(link head, int* n, int len_list, int i)
 {
-    link tmp, tmp2;
-    int i;
-    int f_head;
-
-    i = 0;
-    f_head = 0;
-
-    while ((*head) != NULL && !(f_head))
+    if(head != NULL)
     {
-        if(((*head)->data % k) == 0)
+        *n = head->data + media(head->next, n, len_list, i + 1);
+        if (i == 1)
         {
-            tmp = (*head);
-            (*head) = (*head)->next;
-            free(tmp);
-            i++;
+            return *n / (float)len_list;
         }
         else
         {
-            f_head = 1;
+            return *n;
         }
     }
-
-    tmp2 = (*head);
-
-    if(tmp2 != NULL)
+    else
     {
-        while (tmp2->next != NULL)
-        {
-            if ((tmp2->next->data % k) == 0)
-            {
-                tmp = tmp2->next;
-                tmp2->next = tmp2->next->next;
-                free(tmp);
-                i++;
-            }
-            else
-            {
-                tmp2 = tmp2->next;
-            }
-
-        } 
+        return 0;
     }
-    
-    return i;
+
 }
